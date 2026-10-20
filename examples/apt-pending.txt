@@ -1,0 +1,5 @@
+# fixture-format: apt-upgradable-v1
+# One package per line. The optional second field is a fixture version string.
+libc6 2.36-9+deb12u8
+nginx 1.22.1-9
+ca-certificates 20230311

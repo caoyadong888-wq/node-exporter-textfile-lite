@@ -1,0 +1,4 @@
+# fixture-format: heartbeat-v1
+service: web
+status: up
+unix_time: 1761000000

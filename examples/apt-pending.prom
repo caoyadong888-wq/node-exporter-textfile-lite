@@ -1,0 +1,3 @@
+# HELP textfile_pending_updates_count Package lines in the fixture file
+# TYPE textfile_pending_updates_count gauge
+textfile_pending_updates_count{manager="apt",host="example.com",source="fixture"} 3

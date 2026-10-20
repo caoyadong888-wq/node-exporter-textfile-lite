@@ -1,0 +1,8 @@
+# Sample for /etc/cron.d (the sixth field is the user).
+# Point node_exporter at the output directory with --collector.textfile.directory.
+# Check upstream docs for that flag on your release.
+# Heartbeat age uses date +%s because these lines do not pass --now.
+SHELL=/bin/bash
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+*/5 * * * * root /usr/bin/bash /opt/textfile-collectors/pending_updates.sh --fixture /etc/node-textfile/fixtures/apt-pending.txt --manager apt --host example.com --out /var/lib/node_exporter/textfile/apt-pending.prom
+*/5 * * * * root /usr/bin/bash /opt/textfile-collectors/service_heartbeat.sh --fixture /etc/node-textfile/fixtures/heartbeat-web.txt --out /var/lib/node_exporter/textfile/heartbeat-web.prom
